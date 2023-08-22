@@ -1,0 +1,54 @@
+<div class="content">
+  <form
+    class="contact-form"
+    align="center"
+    (submit)="sendEmail($event)"
+    autocomplete="off"
+  >
+    <label>Name</label>
+    <input
+      pInputText
+      pTooltip="Enter your name"
+      type="text"
+      pInputText
+      class="p-inputtext-lg"
+      name="user_name"
+      placeholder="Name"
+      required
+    />
+
+    <label>Email</label>
+    <input
+      pInputText
+      pTooltip="Enter a valid email"
+      type="email"
+      pInputText
+      class="p-inputtext-lg"
+      name="user_email"
+      placeholder="Ex. pat@example.com"
+      required
+    />
+
+    Please leave a message
+    <textarea
+      name="message"
+      pInputTextarea
+      maxlength="256"
+      placeholder="I'm interested in..."
+      required
+    ></textarea>
+    <button
+      class="btn-76"
+      (submit)="sendEmail($event)"
+      type="submit"
+      value="Send"
+    >
+      Submit
+    </button>
+
+    <div [ngClass]="!submitted ? 'hidden' : 'visible'" class="center-text">
+      <span style="font-size: 20px">{{ responseMessage }}</span>
+    </div>
+  </form>
+  <br />
+</div>

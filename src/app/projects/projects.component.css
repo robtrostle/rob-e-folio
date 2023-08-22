@@ -1,0 +1,15 @@
+@import 'primeflex/primeflex.css';
+
+.content {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+  }
+
+  .grid {
+    margin-top: 5rem;
+  }
+
+  a {
+    text-decoration: none;
+  }

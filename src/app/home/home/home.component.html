@@ -1,0 +1,155 @@
+<div class="content">
+  <p-avatar
+    image="assets/ME.PNG"
+    styleClass="mr-2"
+    size="xlarge"
+    shape="circle"
+  ></p-avatar
+  ><span class="name">Robert Trostle</span>
+</div>
+
+<div class="content">
+  <p-card
+    header="Full Stack Engineer"
+    subheader="PNC Financial Services"
+    [style]="{ width: '360px' }"
+  >
+    <ng-template pTemplate="header">
+      <img
+        alt="Card"
+        src="https://www.science.org/do/10.1126/science.adg2088/abs/_20221208_on_aiwritescode.jpg"
+      />
+    </ng-template>
+    <p>
+      Welcome! I started as a full stack developer in March of 2022. I am part
+      of an agile scrum team building an account opening web application using
+      Angular for the UI and Java Spring-Boot for the back end.
+    </p>
+    <ng-template pTemplate="footer" class="buttons">
+      <p-button
+        icon="pi pi-wrench"
+        label="Skills"
+        styleClass="p-button-raised p-button-danger mr-2 mb-2"
+        (click)="showDialog()"
+      ></p-button>
+      <p-button
+        [routerLink]="['/projects']"
+        routerLinkActive="router-link-active"
+        icon="pi pi-folder-open"
+        label="Projects"
+        pTooltip="View my live demos"
+        tooltipPosition="bottom"
+        styleClass="p-button-warning"
+        [style]="{ 'margin-left': '.5em' }"
+      ></p-button>
+      <a
+        appHighlight
+        aria-label="Rob on Github"
+        target="_blank"
+        rel="noopener"
+        href="https://github.com/robtrostle?tab=repositories"
+        title="GitHub"
+      >
+        <p-button
+          icon="pi pi-github"
+          label="Git"
+          styleClass="p-button-primary"
+          [style]="{ 'margin-left': '.5em' }"
+        ></p-button
+      ></a>
+    </ng-template>
+  </p-card>
+
+  <p-sidebar [(visible)]="sidebarVisible">
+    <ng-template pTemplate="header">More About Me</ng-template>
+    <ng-template pTemplate="content"
+      >I am currently based in Jacksonville, Florida & work remotely. I spent
+      1.5 years as a Quality Automation Engineer so I have the skills necessary
+      to build fully tested & quality software. In my current project, we use
+      Angular for front end, Java Spring Boot for the back end rest APIs, and
+      MongoDB. I have worked on all 3 layers of the application & helped train
+      our document AI model using Python. We are the first team in my company to
+      implement a document upload feature in our User Interface that is able to
+      automate the manual processing of documents. We use Jenkins for our CI/CD
+      deployments and OpenShift Container Platform. I use ServiceNow to initiate
+      releases and participate from start until the end of the deployment
+      process. Our app is mobile friendly and fully accessbile. Take a look
+      around & send me a message!</ng-template
+    >
+    <ng-template pTemplate="footer">Thanks for visiting!</ng-template>
+  </p-sidebar>
+  <p-button
+    label="More"
+    tooltipPosition="right"
+    pTooltip="More about Rob"
+    class="button"
+    (click)="sidebarVisible = true"
+    icon="pi pi-spin pi-info-circle"
+  ></p-button>
+
+  <p-button
+    label="Info"
+    tooltipPosition="right"
+    pTooltip="About this site"
+    class="button2"
+    (click)="showInfoDialog()"
+    icon="pi pi-prime"
+  ></p-button>
+</div>
+
+<div class="card flex justify-content-center">
+  <p-dialog id="scroll" header="Header" [(visible)]="visible">
+    <ng-template pTemplate="header">
+      <span class="text-xl font-bolder">Skills & Tools</span>
+    </ng-template>
+
+    <div class="card flex justify-content-center">
+      <p-scroller
+        [items]="items"
+        [itemSize]="50"
+        scrollHeight="300px"
+        styleClass="border-1 surface-border"
+        [style]="{ width: '18rem', height: '30rem' }"
+      >
+        <ng-template pTemplate="item" let-item let-options="options">
+          <div
+            class="flex align-items-center p-2"
+            [ngClass]="{ 'surface-ground': options.odd }"
+            style="height: 50px"
+          >
+            {{ item }}
+          </div>
+        </ng-template>
+      </p-scroller>
+    </div>
+
+    <ng-template pTemplate="footer">
+      <p-button
+        icon="pi pi-check"
+        (click)="visible = false"
+        label="Ok"
+        styleClass="p-button-text"
+      ></p-button>
+    </ng-template>
+  </p-dialog>
+</div>
+
+<!-- ------------------------------------------Info Section---------------------------------- -->
+
+<div class="card flex justify-content-center">
+  <p-dialog id="info" header="Header" [(visible)]="visibleInfo">
+    <ng-template pTemplate="header">
+      <span class="text-xl font-bolder">Hi there</span>
+    </ng-template>
+    This site was built using
+    <a href="https://primeng.org/" target="_blank">PrimeNG</a> components
+    <ng-template pTemplate="footer">
+      <p-button
+        icon="pi pi-check"
+        (click)="visibleInfo = false"
+        label="Ok"
+        styleClass="p-button-text"
+      ></p-button>
+    </ng-template>
+  </p-dialog>
+</div>
