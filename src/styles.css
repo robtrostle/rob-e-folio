@@ -10,4 +10,5 @@
 body {
     font-family: var(--font-family);
     background: linear-gradient(to right, #000000, #006211);
+    height: 100%;
 }

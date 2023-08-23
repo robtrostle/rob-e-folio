@@ -23,9 +23,6 @@ import { DialogService } from 'primeng/dynamicdialog';
 import { ScrollerModule } from 'primeng/scroller';
 import { ProjectsComponent } from './projects/projects.component';
 
-
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,7 +49,7 @@ import { ProjectsComponent } from './projects/projects.component';
     InputTextareaModule,
     SplitButtonModule,
     DialogModule,
-    ScrollerModule
+    ScrollerModule,
   ],
   providers: [DialogService],
   bootstrap: [AppComponent]

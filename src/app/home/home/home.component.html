@@ -78,23 +78,28 @@
     >
     <ng-template pTemplate="footer">Thanks for visiting!</ng-template>
   </p-sidebar>
-  <p-button
-    label="More"
-    tooltipPosition="right"
-    pTooltip="More about Rob"
-    class="button"
-    (click)="sidebarVisible = true"
-    icon="pi pi-spin pi-info-circle"
-  ></p-button>
+</div>
 
-  <p-button
-    label="Info"
-    tooltipPosition="right"
-    pTooltip="About this site"
-    class="button2"
-    (click)="showInfoDialog()"
-    icon="pi pi-prime"
-  ></p-button>
+<div class="container2" style="background-color: transparent">
+  <div class="button-container" style="background-color: transparent">
+    <p-button
+      label="More"
+      tooltipPosition="right"
+      pTooltip="More about Rob"
+      class="button"
+      (click)="sidebarVisible = true"
+      icon="pi pi-spin pi-info-circle"
+    ></p-button>
+
+    <p-button
+      label="Info"
+      tooltipPosition="right"
+      pTooltip="About this site"
+      class="button2"
+      (click)="showInfoDialog()"
+      icon="pi pi-prime"
+    ></p-button>
+  </div>
 </div>
 
 <div class="card flex justify-content-center">
