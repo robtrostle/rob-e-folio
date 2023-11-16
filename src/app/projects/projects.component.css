@@ -13,3 +13,7 @@
   a {
     text-decoration: none;
   }
+
+  .bg-primary {
+    background-color: #f39c50 !important; /* Pale Orange color */
+}
