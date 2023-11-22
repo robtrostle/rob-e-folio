@@ -22,6 +22,7 @@ import { DialogModule } from 'primeng/dialog';
 import { DialogService } from 'primeng/dynamicdialog';
 import { ScrollerModule } from 'primeng/scroller';
 import { ProjectsComponent } from './projects/projects.component';
+import { RippleModule } from 'primeng/ripple'
 
 @NgModule({
   declarations: [
@@ -50,6 +51,7 @@ import { ProjectsComponent } from './projects/projects.component';
     SplitButtonModule,
     DialogModule,
     ScrollerModule,
+    RippleModule
   ],
   providers: [DialogService],
   bootstrap: [AppComponent]

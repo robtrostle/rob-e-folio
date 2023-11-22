@@ -1,13 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { DialogService } from 'primeng/dynamicdialog';
 import { SkillsModalComponent } from 'src/app/skills-modal/skills-modal.component';
+import { PrimeNGConfig } from 'primeng/api';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit{ 
+  
+    
 
   sidebarVisible: boolean = false;
 
@@ -29,7 +32,11 @@ export class HomeComponent {
     'JavaScript'
   ];
 
-  constructor(private dialogService: DialogService){}
+  constructor(private dialogService: DialogService, private primengConfig: PrimeNGConfig){}
+
+  ngOnInit() { 
+    this.primengConfig.ripple = true; 
+} 
 
     visible: boolean = false;
 

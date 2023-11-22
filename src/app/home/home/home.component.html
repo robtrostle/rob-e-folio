@@ -27,12 +27,14 @@
     </p>
     <ng-template pTemplate="footer" class="buttons">
       <p-button
+        pRipple
         icon="pi pi-wrench"
         label="Skills"
         styleClass="p-button-raised p-button-danger mr-2 mb-2"
         (click)="showDialog()"
       ></p-button>
       <p-button
+        pRipple
         [routerLink]="['/projects']"
         routerLinkActive="router-link-active"
         icon="pi pi-folder-open"
@@ -51,6 +53,7 @@
         title="GitHub"
       >
         <p-button
+          pRipple
           icon="pi pi-github"
           label="Git"
           styleClass="p-button-primary"
@@ -83,6 +86,7 @@
 <div class="container2" style="background-color: transparent">
   <div class="button-container" style="background-color: transparent">
     <p-button
+      pRipple
       label="More"
       tooltipPosition="right"
       pTooltip="More about Rob"
@@ -92,6 +96,7 @@
     ></p-button>
 
     <p-button
+      pRipple
       label="Info"
       tooltipPosition="right"
       pTooltip="About this site"
@@ -102,7 +107,7 @@
   </div>
 </div>
 
-<div class="card flex justify-content-center">
+<div  class="card flex justify-content-center">
   <p-dialog id="scroll" header="Header" [(visible)]="visible">
     <ng-template pTemplate="header">
       <span class="text-xl font-bolder">Skills & Tools</span>
