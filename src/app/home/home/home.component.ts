@@ -15,9 +15,13 @@ export class HomeComponent implements OnInit{
   sidebarVisible: boolean = false;
 
   items: string[] = [
+    'Java',
     'Angular',
     'TypeScript',
-    'Java',
+    'Oracle SQL',
+    'React',
+    'AWS',
+    'Next JS',
     'Python',
     'Spring-Boot',
     'MongoDB',
@@ -26,10 +30,13 @@ export class HomeComponent implements OnInit{
     'Jenkins',
     'OpenShift',
     'GitHub',
+    'GitLab',
     'Bitbucket',
     'Groovy',
+    'Kotlin',
     'Postman',
-    'JavaScript'
+    'JavaScript',
+    'New Relic'
   ];
 
   constructor(private dialogService: DialogService, private primengConfig: PrimeNGConfig){}
